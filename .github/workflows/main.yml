@@ -26,7 +26,6 @@ jobs:
                 name: Build and push
                 uses: docker/build-push-action@v4
                 with: 
-                  context: ./node-ci-cd-app
-                  file: ./Dockerfile
+                  context: ./node-ci-cd-app/Dockerfile
                   push: true
                   tags: ${{ secrets.DOCKERHUB_USERNAME }}/node-ci-cd-app:latest
